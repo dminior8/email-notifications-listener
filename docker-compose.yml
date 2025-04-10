@@ -1,0 +1,15 @@
+services:
+  email-notifications-listener:
+    build:
+      context: ./email-notifications-listener
+    container_name: email-notifications-listener
+    networks:
+      - app-network
+    ports:
+      - "8081:8081"
+    depends_on:
+      - prometheus
+
+networks:
+  app-network:
+    external: true
