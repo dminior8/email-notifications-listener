@@ -5,12 +5,12 @@ spring:
   application:
     name: email-notifications-listener
   rabbitmq:
-    host: localhost
+    host: rabbitmq
     port: 5672
     username: guest
     password: guest
   data:
     mongodb:
-      uri: mongodb://root:example@localhost:27017/notifications-db?authSource=admin
+      uri: mongodb://root:example@mongo:27017/notifications-db?authSource=admin
 
 
